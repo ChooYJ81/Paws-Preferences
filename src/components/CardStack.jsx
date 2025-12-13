@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 
 // Tune these to taste
 const SWIPE_THRESHOLD_PX = 80;
-const MAX_VISIBLE = 3;
+const MAX_VISIBLE = 15;
 
 export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
   const visible = useMemo(() => {
@@ -28,6 +28,7 @@ export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
               isTop={isTop}
               onLike={onLike}
               onDislike={onDislike}
+              i={i}
             />
           );
         })}
@@ -35,12 +36,12 @@ export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
   );
 }
 
-function Card({ cat, isTop, onLike, onDislike }) {
+function Card({ cat, isTop, onLike, onDislike, i }) {
   // only the top card is draggable
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-250, 250], [-12, 12]);
-  const likeOpacity = useTransform(x, [0, 140], [0, 1]);
-  const nopeOpacity = useTransform(x, [-140, 0], [1, 0]);
+  const likeOpacity = useTransform(x, [0, 80], [0, 1]);
+  const nopeOpacity = useTransform(x, [-80, 0], [1, 0]);
 
   return (
     <motion.div
@@ -67,7 +68,7 @@ function Card({ cat, isTop, onLike, onDislike }) {
             src={cat.url}
             alt="A cat"
             className="h-full w-full object-cover"
-            loading="eager"
+            loading={isTop ? "eager" : "lazy"}
             draggable={false}
           />
 
@@ -91,7 +92,7 @@ function Card({ cat, isTop, onLike, onDislike }) {
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <div className="flex items-center justify-between text-xs text-white/80">
               <span className="rounded-full bg-white/10 px-2 py-1 ring-1 ring-white/10">
-                Swipe me
+                Swipe me {i}
               </span>
               <span className="rounded-full bg-white/10 px-2 py-1 ring-1 ring-white/10">
                 Cataas

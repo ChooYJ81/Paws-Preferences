@@ -15,7 +15,7 @@ export default function Summary({ total, liked, dislikedCount, onRestart }) {
         />
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 max-h-80 overflow-y-auto">
         <h3 className="text-sm font-medium text-white/85">Your liked cats</h3>
 
         {liked.length === 0 ? (

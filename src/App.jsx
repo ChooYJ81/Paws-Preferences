@@ -100,8 +100,8 @@ export default function App() {
     <div className="min-h-full bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       <div className="mx-auto max-w-md px-4 pt-6 pb-10">
         <header className="mb-5">
-          <p className="text-4xl font-semibold tracking-tight">Paws & Preferences</p>
-          <p className="mt-1 text-sm text-white/70">
+          <p className="text-4xl font-semibold tracking-tight text-center">Paws & Preferences</p>
+          <p className="mt-1 text-sm text-white/70 text-center">
             Swipe right to <span className="text-emerald-300">like</span>, left to{" "}
             <span className="text-rose-300">dislike</span>.
           </p>
