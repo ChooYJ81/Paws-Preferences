@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardStack from "./components/CardStack.jsx";
 import Summary from "./components/Summary.jsx";
-import Loader from "./components/Loader.jsx";
 import './App.css'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -65,10 +64,6 @@ export default function App() {
   if (cats.length === 0 || loading) {
     return (
       <div className="min-h-screen grid place-items-center text-white">
-        {/* <div>
-          <p className="mb-6 text-2xl text-center">Loading cats</p>
-          <Loader />
-        </div> */}
         <DotLottieReact
           src="https://lottie.host/1fd869d1-49a3-4987-9245-c965ac1802b1/FkvHESrniA.lottie"
           loop
