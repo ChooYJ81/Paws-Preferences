@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 
 // Tune these to taste
 const SWIPE_THRESHOLD_PX = 80;
-const MAX_VISIBLE = 5;
+const MAX_VISIBLE = 3;
 
 export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
   const visible = useMemo(() => {
