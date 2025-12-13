@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/Paws-Preferences/',
+  base: "/Paws-Preferences/",
 })
