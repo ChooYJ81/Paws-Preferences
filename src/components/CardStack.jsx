@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { motion, useMotionValue, useTransform } from "motion/react";
 
-// Tune these to taste
 const SWIPE_THRESHOLD_PX = 80;
 const MAX_VISIBLE = 3;
 
@@ -20,7 +19,7 @@ export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
         .map((cat, i) => ({cat, i}))
         .reverse()
         .map(({ cat, i }) => {
-          const isTop = i === 0; // after reverse, last drawn is top
+          const isTop = i === 0;
           return (
             <Card
               key={cat.id}
@@ -28,7 +27,6 @@ export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
               isTop={isTop}
               onLike={onLike}
               onDislike={onDislike}
-              i={i}
             />
           );
         })}
@@ -36,7 +34,7 @@ export default function CardStack({ cats, currentIndex, onLike, onDislike }) {
   );
 }
 
-function Card({ cat, isTop, onLike, onDislike, i }) {
+function Card({ cat, isTop, onLike, onDislike }) {
   // only the top card is draggable
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-250, 250], [-12, 12]);
@@ -92,7 +90,7 @@ function Card({ cat, isTop, onLike, onDislike, i }) {
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <div className="flex items-center justify-between text-xs text-white/80">
               <span className="rounded-full bg-white/10 px-2 py-1 ring-1 ring-white/10">
-                Swipe me {i}
+                Swipe me
               </span>
               <span className="rounded-full bg-white/10 px-2 py-1 ring-1 ring-white/10">
                 Cataas

@@ -3,6 +3,7 @@ import CardStack from "./components/CardStack.jsx";
 import Summary from "./components/Summary.jsx";
 import Loader from "./components/Loader.jsx";
 import './App.css'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const CAT_COUNT = 15;
 
@@ -64,10 +65,15 @@ export default function App() {
   if (cats.length === 0 || loading) {
     return (
       <div className="min-h-screen grid place-items-center text-white">
-        <div>
+        {/* <div>
           <p className="mb-6 text-2xl text-center">Loading cats</p>
           <Loader />
-        </div>
+        </div> */}
+        <DotLottieReact
+          src="/paw-load.lottie"
+          loop
+          autoplay
+        />
       </div>
     )
   }
