@@ -49,7 +49,7 @@ function Card({ cat, isTop, onLike, onDislike, i }) {
       style={{ x, rotate, touchAction: "none" }}
       drag={isTop ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.15}
+      dragElastic={0.5}
       whileTap={isTop ? { cursor: "grabbing" } : undefined}
       onDragEnd={() => {
         const v = x.get();
