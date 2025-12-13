@@ -70,9 +70,10 @@ export default function App() {
           <Loader />
         </div> */}
         <DotLottieReact
-          src="/paw-load.lottie"
+          src="https://lottie.host/1fd869d1-49a3-4987-9245-c965ac1802b1/FkvHESrniA.lottie"
           loop
           autoplay
+          style={{ width: 200, height: 200 }}
         />
       </div>
     )
