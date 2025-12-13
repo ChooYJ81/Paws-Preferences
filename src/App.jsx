@@ -146,7 +146,7 @@ export default function App() {
               </div>
 
               <p className="mt-4 text-center text-xs text-white/50">
-                Tip: Try dragging a card—release past the threshold to vote.
+                Created by Choo Yan Jie
               </p>
             </>
           ) : (
