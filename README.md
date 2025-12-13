@@ -1,16 +1,26 @@
-# React + Vite
+# Paws & Preferences
+A mobile-first web application that helps users discover their cat preferences through swipe-based interactions, inspired by popular dating app mechanics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was completed as part of a technical assessment for **Netizen Experience**.
 
-Currently, two official plugins are available:
+## Features
+- Swipe right to **Like** and swipe left to **Dislike** cat images
+- Smooth drag and swipe animations
+- Mobile-first, responsive UI
+- Summary screen displaying:
+  - Total cats viewed
+  - Number of liked cats
+  - List of liked cats
+- Uses real cat images from the **Cataas API**
+- Dark-mode–only UI for consistent appearance
+- Loading Animation from **LottieFiles**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **React** (with Vite)
+- **Tailwind CSS** - styling and layout
+- **Framer Motion** - swipe gestures and animations
+- **Catass API** - random cat images
+- **GitHub Pages** - deployment
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Demo
+https://chooyj81.github.io/Paws-Preferences/
