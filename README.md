@@ -21,6 +21,7 @@ This project was completed as part of a technical assessment for **Netizen Exper
 - **Framer Motion** - swipe gestures and animations
 - **Catass API** - random cat images
 - **GitHub Pages** - deployment
+- **LottieFiles** - loading animation
 
 ## Live Demo
 https://chooyj81.github.io/Paws-Preferences/
